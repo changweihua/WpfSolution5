@@ -55,11 +55,46 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EllipseInfo.cs" />
+    <Compile Include="FrameBasedAnimationWindow.xaml.cs">
+      <DependentUpon>FrameBasedAnimationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KeySplineAnimationWindow.xaml.cs">
+      <DependentUpon>KeySplineAnimationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PathBasedAnimationWindow.xaml.cs">
+      <DependentUpon>PathBasedAnimationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RadialGradientBrushWindow.xaml.cs">
+      <DependentUpon>RadialGradientBrushWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RadialGradientBrushWindow2.xaml.cs">
+      <DependentUpon>RadialGradientBrushWindow2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RadialGradientBrushWindow3.xaml.cs">
+      <DependentUpon>RadialGradientBrushWindow3.xaml</DependentUpon>
+    </Compile>
     <Page Include="AnimationInTemplateWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AnimationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EraseAnimationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrameBasedAnimationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrameRatesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KeySplineAnimationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -77,12 +112,41 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="EraseAnimationWindow.xaml.cs">
+      <DependentUpon>EraseAnimationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrameRatesWindow.xaml.cs">
+      <DependentUpon>FrameRatesWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MonitorAnimationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PathBasedAnimationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RadialGradientBrushWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RadialGradientBrushWindow2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RadialGradientBrushWindow3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MonitorAnimationWindow.xaml.cs">
+      <DependentUpon>MonitorAnimationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

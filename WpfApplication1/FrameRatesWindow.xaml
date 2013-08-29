@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfApplication1.FrameRatesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="FrameRatesWindow" Height="300" Width="300">
+    <Window.Resources>
+        <BeginStoryboard x:Key="beginStoryboard">
+            <Storyboard Timeline.DesiredFrameRate="{Binding ElementName=txtFrameRate,Path=Text}">
+                <DoubleAnimation Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Canvas.Left)" From="0" To="300" Duration="0:0:5" />
+                <DoubleAnimation Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(Canvas.Top)" From="300" To="0" Duration="0:0:2.5" />
+            </Storyboard>
+        </BeginStoryboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <EventTrigger.Actions>
+                <StaticResource ResourceKey="beginStoryboard" />
+            </EventTrigger.Actions>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="Button.Click">
+            <EventTrigger.Actions>
+                <StaticResource ResourceKey="beginStoryboard" />
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <!--<RowDefinition Height="auto" />-->
+        </Grid.RowDefinitions>
+        <Canvas ClipToBounds="True">
+            <Ellipse Name="ellipse" Fill="Red" Width="10" Height="10" />
+        </Canvas>
+        <StackPanel Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="期望速率" />
+                <TextBox Name="txtFrameRate" Width="150" />
+            </StackPanel>
+            <Button Content="重复" />
+        </StackPanel>
+    </Grid>
+</Window>
