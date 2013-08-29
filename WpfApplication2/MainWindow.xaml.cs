@@ -11,6 +11,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Media;
+using System.IO;
 
 namespace WpfApplication2
 {
@@ -22,6 +24,26 @@ namespace WpfApplication2
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
+            SoundPlayer player = new SoundPlayer();
+            player.SoundLocation = "test.wav";
+
+            try
+            {
+                player.Load();
+                player.Play();
+            }
+            catch (FileNotFoundException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

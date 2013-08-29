@@ -1,0 +1,15 @@
+﻿<Window x:Class="WpfApplication2.VideoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wfi="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+        Title="VideoWindow" Height="300" Width="300">
+    <!--xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"-->
+    <Grid>
+        <!--<wfi:WindowsFormsHost>
+            <ElementHost>
+                <MediaElement LoadedBehavior="Play" Stretch="Uniform" Source="D:\baidu player\\rio.mkv" />
+            </ElementHost>
+        </wfi:WindowsFormsHost>-->
+        <MediaElement LoadedBehavior="Play" Stretch="Uniform" Source="D:\baidu player\\rio.mkv" />
+    </Grid>
+</Window>
